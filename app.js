@@ -11,12 +11,21 @@ app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-app.get('/', 'home', (req, res) => {
-  res.render('home', { title: 'Home Page' });
-});
+
 
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
+// Serve the home page
+app.get('/', (req, res) => {
+  res.render('home', { title: 'Todo App - Homepage' });
+});
+
+app.get('/home', (req, res) => {
+  const data = {
+    title: "Todo App - Home"
+  };
+  res.render('home', data);
+});
 
 // Serve the login form page
 app.get('/login', (req, res) => {
@@ -32,6 +41,14 @@ app.get('/register', (req, res) => {
     title: "Todo App - Register"
   };
   res.render('register', data);
+});
+
+// Serve the tasklist page
+app.get('/tasklist', (req, res) => {
+  const data = {
+    title: "Todo App - Task List"
+  };
+  res.render('tasklist', data);
 });
 
 // Start the server
