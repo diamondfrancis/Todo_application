@@ -17,16 +17,28 @@
         <a href="/login">Login</a> | 
         <a href="/register">Register</a>
     </nav>
-    <header><h1>Task List</h1></header>
-    <input type="text" placeholder="Add New Todo">
+    <header>    
+    <h1>To-Do List <i class="fa fa-plus"></i></header>
+    <div id="container">
 
-<ul>
-    <li><span><i class="fa fa-trash"></i></span> Go To Maths Class</li>
-    <li><span><i class="fa fa-trash"></i></span> Buy New Clothes</li>
-    <li><span><i class="fa fa-trash"></i></span> Visit George</li>
-</ul>
+<div class="container mt-5">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-6">
+            <div class="p-4 bg-white notes">
+                <div class="d-flex flex-row align-items-center notes-title">
+                    <h4>Team Meeting</h4><span class="px-2 review-text ml-2 rounded">completed</span>
+                </div>
+                <div class="d-flex flex-row align-items-center align-content-center"><span class="rounded info">30/10/2023</span><span class="dot"></span><span class="info ml-1">ML - 1321</span></div>
+            </div>
+            <div class="p-3 bg-white">
+                <div class="d-flex align-items-center"><label><input type="checkbox" class="option-input radio"><span class="label-text">Task list and assignments</span></label></div>
+                <div class="d-flex align-items-center"><label><input type="checkbox" class="option-input radio"><span class="label-text">Set due date and assignments</span></label></div>
+                <div class="d-flex align-items-center"><label><input type="checkbox" class="option-input radio"><span class="label-text">Remove duplicate tasks and stories</span></label></div>
+                <div class="d-flex align-items-center"><label><input type="checkbox" class="option-input radio"><span class="label-text">Update the userflow and stories</span></label></div>
+                <div class="d-flex align-items-center"><label><input type="checkbox" class="option-input radio"><span class="label-text">Adjust the components</span></label></div>
+            </div>
+    </div>
 </div>
-
     <footer>
         <p>© 2023 Todo App. All rights reserved.</p>
     </footer>
